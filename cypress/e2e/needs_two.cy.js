@@ -1,5 +1,5 @@
 describe('template spec', () => {
-    it('Needs test', () => {
+    it('Needs filter test', () => {
         cy.fixture('data_test_login').then(data =>{
             cy.visit('https://dev.profteam.su/login')
 
@@ -16,9 +16,15 @@ describe('template spec', () => {
             cy.log('Клик по кнопке "Потребности"')
             cy.get(':nth-child(1) > .header__nav > [href="/needs"]').click()
             cy.wait(2000)
+
+            cy.log('Клик по нужной кнопке фильтра')
+            cy.get(':nth-child(2) > .radio-component__input').click()
+            cy.wait(2000)
+
+            cy.get('.button__background-color-green')
         })
     })
-    it('Needs search test', () => {
+    it('Needs otclic test', () => {
         cy.fixture('data_test_login').then(data =>{
             cy.visit('https://dev.profteam.su/login')
 
@@ -36,11 +42,9 @@ describe('template spec', () => {
             cy.get(':nth-child(1) > .header__nav > [href="/needs"]').click()
             cy.wait(2000)
 
-            cy.log('Ввод запроса')
-            cy.get('.form-input--text').type(data.search)
-
-            cy.log('Клик по иконке поиска')
-            cy.get('div.search-input__field > .button').click()
+            cy.log('Клик по ннопке откликнуться')
+            cy.get('.button__background-color-green').click()
+            cy.wait(2000)
         })
     })
 })
