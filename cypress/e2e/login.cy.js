@@ -38,4 +38,22 @@ describe('template srec', () => {
             cy.get(':nth-child(3) > .button').click()
         })
     })
+    it('Negative login test 2', () => {
+        cy.fixture('data_test_login_n').then(data => {
+
+            cy.visit('https://dev.profteam.su/login')
+            cy.log('Переход на страницу авторизации')
+
+            cy.log('Ввод неправильного логина')
+            cy.get('.form-input--text')
+                .type(data.login_n)
+
+            cy.log('Ввод неправильного пароля')
+            cy.get('.form-input--password')
+                .type(data.password)
+
+            cy.log('Клик по кнопке "Войти"')
+            cy.get(':nth-child(3) > .button').click()
+        })
+    })
 })

@@ -18,7 +18,7 @@ describe('template spec', () => {
             cy.wait(2000)
         })
     })
-    it('Notice test', () => {
+    it('Notification search test', () => {
         cy.fixture('data_test_login').then(data =>{
             cy.visit('https://dev.profteam.su/login')
 
