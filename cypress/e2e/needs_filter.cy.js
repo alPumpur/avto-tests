@@ -1,5 +1,5 @@
 describe('template spec', () => {
-    it('Needs test', () => {
+    it('Needs filter test', () => {
         cy.fixture('data_test_login').then(data =>{
             cy.visit('https://dev.profteam.su/login')
 
@@ -16,6 +16,11 @@ describe('template spec', () => {
             cy.log('Клик по кнопке "Потребности"')
             cy.get(':nth-child(1) > .header__nav > [href="/needs"]').click()
             cy.wait(2000)
+
+            cy.log('Клик по нужной кнопке фильтра')
+            cy.get(':nth-child(2) > .radio-component__input').click()
+            cy.wait(2000)
+
         })
     })
 })

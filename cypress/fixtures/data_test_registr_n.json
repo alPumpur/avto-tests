@@ -1,11 +1,18 @@
 {
   "login": "alevtinaa",
   "login_n": "аля",
+  "login_n2": "alev tina",
   "password": "QWEasd123!",
   "password_n": "!",
+  "password_n2": "QWEasd123!",
+  "password_n3": "QWEasd123!!!",
   "email": "alevtinaa@gmail.com",
   "email_n": "dfdfdsf",
+  "email_n2": " ",
   "surname": "Pumpur",
-  "name": "Alevtina",
-  "patronymic": "Сергеевна"
+  "surname_n": "Пумпур",
+  "name": "Алевтина",
+  "name_n": "Alevtina",
+  "patronymic": "Сергеевна",
+  "patronymic_n": "Sergeevna"
 }

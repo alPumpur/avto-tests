@@ -1,9 +1,6 @@
 describe('template srec', () => {
-    it('passed', () => {
-        cy.visit('https://dev.profteam.su/login')
-    })
-    it('Positive login test', () => {
-        cy.fixture('data_test_login').then(data => {
+    it('Negative login test password (incorrect - несуществующий пароль)', () => {
+        cy.fixture('data_test_login_n').then(data => {
 
             cy.visit('https://dev.profteam.su/login')
             cy.log('Переход на страницу авторизации')
@@ -12,7 +9,7 @@ describe('template srec', () => {
             cy.get('.form-input--text')
                 .type(data.login)
 
-            cy.log('Ввод правильного пароля')
+            cy.log('Ввод неправильного пароля')
             cy.get('.form-input--password')
                 .type(data.password)
 
